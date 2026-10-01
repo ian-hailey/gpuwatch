@@ -52,6 +52,9 @@ static const gpuwatch_model k_table[] = {
         .vram_off = 0x009A24C0, .vram_dec = DEC_GDDR_MRCODE,
         .modules  = { .base = 0x009024C0, .stride = 0x4000, .vld_off = 0x10, .max_modules = 16 },
     },
+    // Example (untested) - Ada/Ampere single-register VRAM sensor:
+    // { .dev_id=0x2684, .name="RTX 4090", .arch="AD102", .vram="GDDR6X",
+    //   .vram_off=0x0000E2A8, .vram_dec=DEC_ADA_12_32 },    
 };
 
 #define NELEMS(a) (sizeof(a)/sizeof((a)[0]))
